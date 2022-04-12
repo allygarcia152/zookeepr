@@ -4,6 +4,8 @@ const { animals } = require('./data/animals.json');
 //requiring express which allows us to create APIS
 const express = require('express');
 
+const PORT = process.env.PORT || 3001;
+
 //instantiate the server
 const app = express();
 
@@ -56,6 +58,6 @@ app.get('/api/animals', (req, res) => {
 })
 
 //tell server to listen for requests
-app.listen(3001, () => {
+app.listen(PORT, () => {
   console.log(`API serve now on port 3001`);
 });
